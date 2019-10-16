@@ -1,5 +1,4 @@
 #include "AnilloLed.h"
-//#include "LuzCentral.h"
 
 AnilloLed::AnilloLed(int brilloInicial)
 {
