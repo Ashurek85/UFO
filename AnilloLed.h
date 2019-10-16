@@ -13,14 +13,6 @@
 #define MIN_BRILLO 0
 #define MAX_BRILLO 255
 
-/*
-#define BRILLO_MAXIMO 255
-#define BRILLO_MINIMO 50 // Por debajo de este valor se apagará
-
-#define SEGUNDOS_PARA_ANIMACION 60 // Segundos que faltarán para la hora en punto con los que se iniciará el parpadeo
-#define SEGUNDOSGIROLUZCOMPLETA 1 // Número de segundos que tardará el halo de luz en dar una vuelta completa
-
-*/
 enum EstadoEjecucion {
   On,
   Off,
@@ -62,23 +54,5 @@ class AnilloLed
   bool Actualizar();
   EstadoEjecucion ObtenerEstado();
   void CambiarBrillo(int nuevoBrillo);  
-/*
-  
 
-  bool animando; // Indica si la animación se ha iniciado. Puede estar en espera o girando
-  bool girando;  // Estamos dentro de una animación pero ¿girando el halo de luz?
-  int limiteAnimacion; // Tiempo máximo para la animación. Al llegar el numero de segundos parará
-  int limiteParpadeoLed; // Tiempo que el numLedBrillando tiene para mantenerse iluminado
-  int numLedBrillando; // Número del led que está brillando
-
-  bool Animar(bool esperaDescendente, DateTime now);
-  
-
-  bool EsNecesarioLanzarAnimacion(DateTime now);
-
-
-  public:
-  AnilloLed();
-  void Iluminar(int brillo, DateTime now);    
-  */
 };
