@@ -55,8 +55,6 @@ void loop()
   anilloLed->CambiarBrillo(brillo);
   
   DateTime now = rtc.now();
-  //printDate(now);
-  //Serial.print(now.hour());
   if (now.second() == 0 && now.minute() == 0 && anilloLed->ObtenerEstado() == EstadoEjecucion::On)
   {
     // Lanzar animación
@@ -67,22 +65,10 @@ void loop()
   }
   else
   {
-    //Serial.println("Actualizar");
     anilloLed->Actualizar();
   }
-  //printDate(now);
   
   FastLED.show();
   delay(50);
 }
 
-
-void printDate(DateTime date)
-{   
-   Serial.print(date.hour(), DEC);
-   Serial.print(':');
-   Serial.print(date.minute(), DEC);
-   Serial.print(':');
-   Serial.print(date.second(), DEC);
-   Serial.println();
-}
